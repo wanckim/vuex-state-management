@@ -6,14 +6,12 @@
 </template>
 
 <script>
+    import { mapGetters } from 'vuex';
+
     export default {
-        computed: {
-            counter() {
-                return this.$store.getters.doubleCounter;
-            },
-            clicks() {
-                return this.$store.getters.stringCounter;
-            }
-        }
+        computed: mapGetters({
+            counter: 'doubleCounter',
+            clicks: 'stringCounter'
+        })
     }
 </script>
